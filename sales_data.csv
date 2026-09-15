@@ -1,0 +1,91 @@
+Order_ID,Order_Date,Product,Category,Region,Sales,Quantity,Profit,Customer_Type
+ORD1052,2024-01-05,Monitor,Electronics,East,24531.73,2,2311.68,New
+ORD1075,2024-01-13,Office Chair,Furniture,East,32318.62,3,4528.99,New
+ORD1028,2024-01-15,Monitor,Electronics,West,103185.72,5,14277.36,Returning
+ORD1018,2024-01-23,Backpack,Accessories,West,3364.93,2,968.92,New
+ORD1085,2024-01-27,Smartphone,Electronics,North,174690.24,4,11055.5,Returning
+ORD1069,2024-01-28,Wallet,Accessories,North,3106.23,2,1058.48,Returning
+ORD1086,2024-02-03,Sofa,Furniture,North,32548.02,2,3618.04,Returning
+ORD1037,2024-02-04,Monitor,Electronics,West,38557.8,4,4342.73,Returning
+ORD1005,2024-02-04,Jacket,Clothing,South,8787.55,4,1632.96,New
+ORD1009,2024-02-11,Wallet,Accessories,South,1248.8,2,274.17,Returning
+ORD1060,2024-02-22,Jeans,Clothing,North,1443.55,1,365.96,Returning
+ORD1050,2024-03-05,Wrist Watch,Accessories,South,22659.29,4,5123.8,Returning
+ORD1089,2024-03-07,Smartphone,Electronics,West,139177.46,5,10892.06,New
+ORD1084,2024-03-14,Wrist Watch,Accessories,West,5584.93,1,1219.42,Returning
+ORD1059,2024-03-15,Wrist Watch,Accessories,East,26893.87,3,6884.11,New
+ORD1051,2024-03-16,Jacket,Clothing,South,6220.79,1,1562.47,New
+ORD1026,2024-03-17,Wallet,Accessories,North,2347.8,5,546.26,Returning
+ORD1036,2024-03-17,Jeans,Clothing,South,6776.53,3,1944.52,Returning
+ORD1029,2024-03-18,Monitor,Electronics,South,31009.91,2,3988.05,Returning
+ORD1076,2024-04-01,Sunglasses,Accessories,South,7032.07,2,1784.81,New
+ORD1074,2024-04-02,Sunglasses,Accessories,East,13371.51,4,2792.15,Returning
+ORD1016,2024-04-06,Monitor,Electronics,North,11215.18,1,791.18,Returning
+ORD1048,2024-04-21,Laptop,Electronics,North,146792.38,2,20318.47,Returning
+ORD1039,2024-04-27,Backpack,Accessories,West,8154.2,4,2701.84,Returning
+ORD1071,2024-04-28,Bookshelf,Furniture,West,7981.92,2,1418.66,Returning
+ORD1068,2024-05-01,Smartphone,Electronics,East,70400.21,2,7793.41,Returning
+ORD1044,2024-05-03,Wallet,Accessories,North,785.32,1,177.28,Returning
+ORD1033,2024-05-05,Headphones,Electronics,North,20132.96,3,1420.75,Returning
+ORD1022,2024-05-15,Sofa,Furniture,North,93894.83,3,17534.77,New
+ORD1077,2024-05-16,Monitor,Electronics,West,36749.45,4,4314.79,New
+ORD1072,2024-06-02,Backpack,Accessories,West,8890.72,3,1913.88,Returning
+ORD1002,2024-06-11,Smartphone,Electronics,West,209915.81,5,24345.32,Returning
+ORD1047,2024-06-13,Laptop,Electronics,North,195543.72,3,21588.21,Returning
+ORD1011,2024-06-16,Wrist Watch,Accessories,South,37521.81,5,13940.17,New
+ORD1034,2024-06-25,Headphones,Electronics,East,12652.8,5,1729.77,Returning
+ORD1041,2024-06-25,Headphones,Electronics,West,5911.93,1,360.53,New
+ORD1082,2024-06-26,Monitor,Electronics,South,25029.79,2,1813.04,Returning
+ORD1070,2024-06-27,Bookshelf,Furniture,South,24698.46,3,4865.14,Returning
+ORD1057,2024-07-02,Backpack,Accessories,South,1044.48,1,271.71,Returning
+ORD1038,2024-07-03,Bookshelf,Furniture,South,45501.29,5,5781.1,New
+ORD1088,2024-07-12,Study Table,Furniture,West,27990.67,3,4006.38,New
+ORD1010,2024-07-16,Formal Shirt,Clothing,North,4061.93,4,1252.06,Returning
+ORD1090,2024-07-20,Sofa,Furniture,West,75045.4,4,7860.06,New
+ORD1015,2024-07-21,T-Shirt,Clothing,West,1362.02,1,304.34,Returning
+ORD1027,2024-07-27,Smartphone,Electronics,North,121646.33,5,8288.22,Returning
+ORD1062,2024-07-28,T-Shirt,Clothing,West,2748.78,3,552.76,New
+ORD1035,2024-07-28,Wallet,Accessories,North,3221.65,4,699.45,Returning
+ORD1058,2024-08-08,Smartphone,Electronics,East,201330.42,5,18075.63,New
+ORD1067,2024-08-11,Office Chair,Furniture,South,11832.06,2,2280.58,Returning
+ORD1079,2024-08-14,Sofa,Furniture,North,18359.17,1,1959.23,Returning
+ORD1063,2024-08-18,Laptop,Electronics,North,323039.51,5,32130.54,Returning
+ORD1066,2024-08-24,Bookshelf,Furniture,West,21753.86,3,2403.76,Returning
+ORD1017,2024-08-26,Jacket,Clothing,North,13694.73,5,3836.67,New
+ORD1049,2024-09-01,Backpack,Accessories,West,8234.71,3,1782.9,Returning
+ORD1054,2024-09-09,Jeans,Clothing,South,8175.62,3,2213.24,Returning
+ORD1078,2024-09-10,Bookshelf,Furniture,East,7598.98,1,1517.96,New
+ORD1081,2024-09-10,Monitor,Electronics,East,62773.99,5,6425.76,Returning
+ORD1040,2024-09-11,Office Chair,Furniture,North,27732.63,2,4763.8,Returning
+ORD1030,2024-09-15,Laptop,Electronics,South,64115.09,1,5985.22,New
+ORD1020,2024-09-18,T-Shirt,Clothing,North,6423.99,5,1576.66,New
+ORD1013,2024-09-24,Wallet,Accessories,South,3690.52,3,1250.95,New
+ORD1061,2024-09-26,Formal Shirt,Clothing,South,12390.7,5,2475.95,New
+ORD1065,2024-09-27,Sofa,Furniture,East,136862.76,4,20594.99,Returning
+ORD1043,2024-10-02,Monitor,Electronics,East,19716.55,1,2758.9,New
+ORD1004,2024-10-03,Jacket,Clothing,South,5826.09,1,1667.38,Returning
+ORD1053,2024-10-05,Smartphone,Electronics,South,125656.42,4,7901.88,New
+ORD1007,2024-10-09,Backpack,Accessories,South,6461.97,3,1388.62,Returning
+ORD1021,2024-10-09,Wallet,Accessories,East,1544.45,2,477.36,New
+ORD1055,2024-10-10,Bookshelf,Furniture,West,24024.3,3,3634.25,Returning
+ORD1056,2024-10-11,Bookshelf,Furniture,South,28196.89,3,3706.34,New
+ORD1080,2024-10-11,Formal Shirt,Clothing,East,3281.53,2,1031.35,New
+ORD1087,2024-10-13,Office Chair,Furniture,West,15882.52,2,1590.89,New
+ORD1064,2024-10-17,Jacket,Clothing,East,19799.82,4,-904.11,New
+ORD1025,2024-10-20,Laptop,Electronics,South,141405.83,3,16184.91,Returning
+ORD1031,2024-10-21,Study Table,Furniture,South,27829.33,2,5423.54,New
+ORD1008,2024-10-22,Jacket,Clothing,South,9164.36,3,2074.99,New
+ORD1001,2024-10-27,T-Shirt,Clothing,South,890.77,1,197.94,New
+ORD1046,2024-11-02,Headphones,Electronics,West,42292.33,5,5149.88,New
+ORD1024,2024-11-02,Monitor,Electronics,North,51587.22,5,4270.27,New
+ORD1083,2024-11-08,Wallet,Accessories,West,5507.09,5,2087.44,Returning
+ORD1003,2024-11-08,Bookshelf,Furniture,North,5177.93,1,985.15,New
+ORD1014,2024-11-09,Jeans,Clothing,West,6671.43,2,1425.92,New
+ORD1045,2024-11-09,Headphones,Electronics,North,1540.72,1,167.13,Returning
+ORD1073,2024-11-13,Monitor,Electronics,East,66089.16,5,4543.14,Returning
+ORD1042,2024-11-20,Study Table,Furniture,North,26775.17,3,5136.66,Returning
+ORD1019,2024-11-27,Monitor,Electronics,South,15772.77,1,1079.99,Returning
+ORD1032,2024-12-09,Formal Shirt,Clothing,East,10525.87,5,3080.03,New
+ORD1012,2024-12-09,Backpack,Accessories,West,1016.77,1,282.98,Returning
+ORD1006,2024-12-12,Laptop,Electronics,South,155471.16,3,20834.63,Returning
+ORD1023,2024-12-28,Sunglasses,Accessories,West,5237.09,5,1607.78,New
