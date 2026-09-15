@@ -1,0 +1,303 @@
+# Data Visualization Dashboard Using Python
+
+A beginner-friendly data analytics project that loads a structured sales dataset,
+analyzes it with **Pandas**, and builds six visualizations with **Matplotlib** and
+**Seaborn** — arranged into a single dashboard layout, with a written insight for
+every chart.
+
+Built as a Data Analytics / Data Science internship project.
+
+![Sales Performance Dashboard](outputs/dashboard.png)
+
+---
+
+## Table of Contents
+
+- [Objective](#objective)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [The Dataset](#the-dataset)
+- [Visualizations and Insights](#visualizations-and-insights)
+- [Key Findings](#key-findings)
+- [Limitations](#limitations)
+- [What This Project Demonstrates](#what-this-project-demonstrates)
+
+---
+
+## Objective
+
+Take a small structured dataset, explore it with Pandas, and produce multiple
+meaningful visualizations that answer real business questions:
+
+- Which product category generates the most sales, and is it the most profitable?
+- How do sales move over the course of a year?
+- Which region performs best, and why?
+- What is the relationship between order size and profit?
+- Which category-region combinations are strong, and which are being missed?
+
+---
+
+## Tech Stack
+
+| Tool | Used for |
+|---|---|
+| Python 3.8+ | Language |
+| Pandas | Loading, cleaning, grouping, pivoting |
+| NumPy | Reproducible data generation |
+| Matplotlib | Bar, line and scatter charts; GridSpec dashboard layout |
+| Seaborn | Statistical scatter plot and heatmap; consistent theming |
+| Jupyter Notebook | Main analysis walkthrough |
+| Streamlit *(optional)* | Interactive filterable version of the dashboard |
+
+---
+
+## Project Structure
+
+```
+Data-Visualization-Dashboard/
+│
+├── data/
+│   └── sales_data.csv                      # 90 sales records
+│
+├── notebooks/
+│   └── data_visualization_dashboard.ipynb  # Main analysis walkthrough
+│
+├── src/
+│   ├── generate_data.py                    # Creates the dataset (fixed seed)
+│   ├── data_loader.py                      # Loading, cleaning, inspection
+│   ├── analysis.py                         # All Pandas aggregations
+│   └── visualizations.py                   # All plotting functions
+│
+├── dashboard/
+│   └── app.py                              # Optional Streamlit dashboard
+│
+├── outputs/
+│   ├── dashboard.png                       # Combined dashboard
+│   ├── category_sales.png
+│   ├── monthly_sales.png
+│   ├── regional_sales.png
+│   ├── sales_profit_scatter.png
+│   ├── category_region_heatmap.png
+│   └── top_products.png
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+The chart code lives in `src/visualizations.py` and nowhere else. The notebook and
+the Streamlit app both import those same functions, so a change to a chart updates
+every place it appears.
+
+---
+
+## Getting Started
+
+### 1. Clone and enter the project
+
+```bash
+git clone https://github.com/<your-username>/Data-Visualization-Dashboard.git
+cd Data-Visualization-Dashboard
+```
+
+### 2. Create a virtual environment (recommended)
+
+```bash
+python -m venv venv
+
+# macOS / Linux
+source venv/bin/activate
+
+# Windows
+venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Run it
+
+All commands are run **from the project root**, since file paths are relative to it.
+
+```bash
+# Regenerate the dataset (optional — the CSV is already committed)
+python src/generate_data.py
+
+# Inspect the data: head, tail, shape, dtypes, nulls, duplicates
+python src/data_loader.py
+
+# Print the full exploratory analysis
+python src/analysis.py
+
+# Regenerate every PNG in outputs/
+python src/visualizations.py
+```
+
+### 5. Open the notebook
+
+```bash
+jupyter notebook notebooks/data_visualization_dashboard.ipynb
+```
+
+The first cell steps up to the project root automatically, so the notebook works
+whether it is launched from `notebooks/` or from the root.
+
+### 6. Optional: launch the interactive dashboard
+
+```bash
+streamlit run dashboard/app.py
+```
+
+This opens a browser dashboard with sidebar filters for category, region and
+customer type. Every chart and KPI updates as the filters change.
+
+---
+
+## The Dataset
+
+`data/sales_data.csv` contains **90 sales orders from 2024**.
+
+| Column | Type | Description |
+|---|---|---|
+| `Order_ID` | string | Unique order identifier (ORD1001–ORD1090) |
+| `Order_Date` | date | Date of the order |
+| `Product` | string | Product name (16 products) |
+| `Category` | string | Electronics, Furniture, Clothing, Accessories |
+| `Region` | string | North, South, East, West |
+| `Sales` | float | Total order value |
+| `Quantity` | int | Units ordered (1–5) |
+| `Profit` | float | Profit on the order (negative on loss-making orders) |
+| `Customer_Type` | string | New or Returning |
+
+The data is generated by `src/generate_data.py` using `numpy.random.default_rng(42)`.
+Because the seed is fixed, **every run produces identical data**, so the numbers in
+this README, in the notebook, and in the committed charts always agree.
+
+The generator is built to be realistic rather than random:
+
+- Products are tied to their correct category and given plausible price ranges, so a
+  "Sofa" never appears under "Clothing".
+- Profit margins vary by category (Electronics 6–14%, Accessories 20–38%), which is
+  what makes the profit analysis interesting — the biggest category is not the most
+  profitable one.
+- About 8% of orders are sold at a loss, so the scatter plot shows a realistic band
+  instead of a perfect straight line.
+- Monthly weights create mild seasonality rather than uniform noise.
+
+---
+
+## Visualizations and Insights
+
+### 1. Sales by Category
+
+![Sales by Category](outputs/category_sales.png)
+
+Electronics generates about **2.6M of the 3.6M total — roughly 73% of all sales**,
+more than Furniture, Accessories and Clothing combined. That is a concentration risk
+as much as a strength: nearly three quarters of revenue depends on one category.
+
+Crucially, Electronics converts only about **10%** of that revenue into profit, while
+Accessories converts nearly **28%**.
+
+### 2. Monthly Sales Trend
+
+![Monthly Sales](outputs/monthly_sales.png)
+
+Sales **fluctuate rather than trend**. The monthly average is around 303K, but months
+range from roughly 83K (February) to 590K (August) — a spread of over 7x. The second
+half of the year is generally stronger.
+
+### 3. Regional Sales
+
+![Regional Sales](outputs/regional_sales.png)
+
+**North leads at about 1.29M** (≈35% of total), ahead of South (834K), West (805K) and
+East (710K). The lead is not about volume — West actually sold more units (76 vs 68)
+for less revenue. North wins on **value per order**.
+
+On margin the ranking flips: South is most profitable at 14.1% against North's 11.2%.
+
+### 4. Sales vs Profit
+
+![Sales vs Profit](outputs/sales_profit_scatter.png)
+
+Sales and profit are strongly correlated (**r = 0.936**), but the relationship is a
+widening band, not a line. At around 150K in sales, profit ranges from about 11K to
+21K depending on category. One point falls below the break-even line — a Clothing
+order worth 19.8K that lost 904, the single loss-making order in the dataset.
+
+### 5. Category vs Region Heatmap
+
+![Category vs Region](outputs/category_region_heatmap.png)
+
+One cell dominates: **Electronics in the North at roughly 1.05M**, about 29% of all
+sales on its own. The heatmap also exposes gaps the bar charts hide — Accessories
+earns 80K in the South but only 9K in the North.
+
+### 6. Top Products
+
+![Top Products](outputs/top_products.png)
+
+**Smartphones (1.04M) and Laptops (1.03M)** are nearly tied and together exceed half of
+all revenue. Smartphones needed 30 units to get there; Laptops needed 17, and returned
+more profit (117K vs 88K).
+
+---
+
+## Key Findings
+
+1. **Revenue is highly concentrated** — Electronics is 73% of sales; two products are
+   over half.
+2. **The biggest category is the least profitable** — ranking by revenue and ranking
+   by margin give nearly opposite answers.
+3. **North leads on revenue, South on margin** — "best region" depends on the metric.
+4. **Monthly sales fluctuate** rather than following a clear trend.
+5. **Order size predicts profit, but loosely** — category matters more than size.
+
+**Recommendations:** grow the high-margin categories deliberately; investigate the
+Accessories gap in the North and Clothing gap in the West; review loss-making orders
+individually; reduce dependence on two products.
+
+---
+
+## Limitations
+
+This is **90 synthetic records** generated from a fixed seed. That is enough to
+demonstrate the full analysis and visualization workflow, but not enough to support
+real business decisions.
+
+The month-level conclusions are the weakest part: some months contain only four or
+five orders, so a single large Electronics sale can swing a month's total
+substantially. The same code would apply to a production dataset, but the findings
+would need a longer time range and significance testing before anyone acted on them.
+
+Stating this openly is part of the project. Presenting synthetic-data conclusions as
+though they were business fact would be the actual mistake.
+
+---
+
+## What This Project Demonstrates
+
+- **Pandas** — `read_csv`, `to_datetime`, `groupby().agg()` with named aggregations,
+  `pivot_table`, `value_counts`, `describe`, `corr`, duplicate handling
+- **Matplotlib** — bar / line / scatter charts, `GridSpec` for the dashboard layout,
+  custom tick formatters, data labels, annotation lines
+- **Seaborn** — `scatterplot` with hue and size encoding, `heatmap`, consistent theming
+- **Reproducibility** — fixed random seed; identical output on every machine
+- **Code structure** — modular `src/` package shared by the notebook and the app,
+  rather than copy-pasted chart code
+- **Communication** — an insight written under every chart, and honest limitations
+
+---
+
+## License
+
+MIT License — free to use and modify.
+
+## Author
+
+*Add your name, GitHub profile and LinkedIn here before submitting.*
